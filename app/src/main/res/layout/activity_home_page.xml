@@ -51,10 +51,10 @@
                     android:id="@+id/search_view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/white"
-                    android:queryHint="@string/search_for_products"
+                    android:background="@android:color/holo_green_light"
                     android:iconifiedByDefault="false"
-                    android:padding="8dp" />
+                    android:padding="8dp"
+                    android:queryHint="@string/search_for_products" />
 
             </LinearLayout>
 
@@ -69,8 +69,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:backgroundTint="@color/black"
-                    android:background="@color/white">
+                    android:backgroundTint="@color/darkblue"
+                    android:background="@color/Green">
 
                     <ImageView
                         android:id="@+id/promotional_image2"
@@ -142,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/black"
                         android:text="@string/all"
-                        android:textColor="#FF9800"
+                        android:textColor="#3abc12"
                         android:padding="8dp" />
 
                     <Button
@@ -151,8 +151,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/black"
-                        android:textColor="#FF9800"
-                        android:text="iced"
+                        android:textColor="#3abc12"
+                        android:text="Cold"
                         android:padding="8dp" />
 
                     <Button
@@ -160,9 +160,9 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
+                        android:textColor="#3abc12"
                         android:backgroundTint="@color/black"
-                        android:text="hot"
+                        android:text="Hot"
                         android:padding="8dp" />
 
                     <Button
@@ -171,7 +171,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/black"
-                        android:textColor="#FF9800"
+                        android:textColor="#3abc12"
                         android:text="Milktea"
                         android:padding="8dp" />
 
@@ -180,7 +180,7 @@
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#FF9800"
+                        android:textColor="#3abc12"
                         android:backgroundTint="@color/black"
                         android:text="Snacks"
                         android:padding="8dp" />
@@ -228,6 +228,7 @@
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp"
+                    android:backgroundTint="@color/Green"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
@@ -329,6 +330,7 @@
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:focusable="true"
+                    android:backgroundTint="@color/darkblue"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
@@ -433,6 +435,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/Green"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
@@ -538,6 +541,7 @@
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
+                    android:backgroundTint="@color/darkblue"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
 

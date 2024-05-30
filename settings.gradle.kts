@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "kahit"
+rootProject.name = "ComicsHub"
 include(":app")
  

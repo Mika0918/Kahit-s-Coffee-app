@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.comicshub.R;
+
 public class HomePage extends AppCompatActivity {
 
     @Override
@@ -14,14 +16,14 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
 
-        CardView cardView1 = findViewById(R.id.onepieceCardview);
-        CardView cardView2 = findViewById(R.id.bleachCardview);
-        CardView cardView3 = findViewById(R.id.berserkCardview);
-        CardView cardView4 = findViewById(R.id.narutoCardview);
+        CardView cardView1 = findViewById(R.id.cuppucinoCardView);
+        CardView cardView2 = findViewById(R.id.latteCardview);
+        CardView cardView3 = findViewById(R.id.MistoCardview);
+        CardView cardView4 = findViewById(R.id.americanoCardview);
 
 
         cardView1.setOnClickListener(view -> {
-            Intent intent = new Intent(HomePage.this, frappuccino.class);
+            Intent intent = new Intent(HomePage.this, misto.class);
             startActivity(intent);
         });
 

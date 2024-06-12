@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.181"
-        app:srcCompat="@drawable/"
+        app:srcCompat="@drawable/intro2"
         tools:ignore="VisualLintBounds" />
 
     <TextView
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="20dp"
-        android:text="Welcome to Kahits Coffee Shop"
+        android:text="Kahit's Coffee Shop"
         android:textAlignment="center"
         android:textColor="#0E0E0E"
         android:textSize="60sp"
@@ -46,7 +46,7 @@
         android:layout_height="203dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Find the best and cheapest beverages here"
+        android:text="Wake Up Your World with Every Sip - Personalized Coffee Delivered Fresh to Your Doorstep"
         android:textAlignment="center"
         android:textColor="#F89606"
         android:textSize="30sp"
@@ -64,7 +64,7 @@
         android:layout_height="71dp"
         android:layout_marginTop="116dp"
         android:backgroundTint="@android:color/black"
-        android:text="Start Browsing"
+        android:text="Start sippin'"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

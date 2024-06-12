@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kahitcoffee"
+    namespace = "com.example.comicshub"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.kahitcoffee"
+        applicationId = "com.example.comicshub"
         minSdk = 33
         targetSdk = 34
         versionCode = 1
@@ -26,11 +26,9 @@ android {
         }
     }
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
-        viewBinding
     }
-
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -39,7 +37,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -49,4 +46,9 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // Only add these dependencies if they are not already covered by the version catalog
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    implementation("androidx.sqlite:sqlite:2.1.0")
 }

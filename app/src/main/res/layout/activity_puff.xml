@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".misto">
+
+
+
+  <HorizontalScrollView
+      android:id="@+id/horizontalScrollView"
+      android:layout_width="421dp"
+      android:layout_height="214dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.0">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+      <FrameLayout
+          android:layout_width="443dp"
+          android:layout_height="203dp"
+          android:layout_marginEnd="32dp"
+          android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/imageView123"
+            android:layout_width="459dp"
+            android:layout_height="match_parent"
+            android:contentDescription="bleach1"
+            android:scaleType="centerInside"
+            android:src="@drawable/puff" />
+      </FrameLayout>
+
+      <FrameLayout
+          android:layout_width="443dp"
+          android:layout_height="203dp"
+          android:layout_marginEnd="32dp"
+          android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/imageView21"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="image21"
+            android:scaleType="centerInside"
+            android:src="@drawable/chapter1piece" />
+      </FrameLayout>
+
+      <FrameLayout
+          android:layout_width="443dp"
+          android:layout_height="203dp"
+          android:layout_marginEnd="34dp"
+          android:background="@drawable/bg">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="image13"
+            android:scaleType="centerInside"
+            android:src="@drawable/chapter2piece" />
+      </FrameLayout>
+
+    </LinearLayout>
+  </HorizontalScrollView>
+
+  <TextView
+      android:id="@+id/textView1"
+      android:layout_width="355dp"
+      android:layout_height="77dp"
+      android:background="#FFFFFF"
+      android:text="PRICE:$69                                                                             CreamPuff     "
+      android:textSize="25dp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/textView2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.466"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+  <TextView
+      android:id="@+id/textView2"
+      android:layout_width="338dp"
+      android:layout_height="222dp"
+      android:background="#FFFFFF"
+      android:text="Pastry cream, also called crème pâtissière, is a versatile component in a baker's toolbox. Cooked on the stovetop, it's a custard akin to pudding, with a rich taste and a creamy texture that's thick enough to hold its shape"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toTopOf="@+id/button"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.384"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+  <Button
+      android:id="@+id/button"
+      android:layout_width="208dp"
+      android:layout_height="54dp"
+      android:layout_marginBottom="20dp"
+      android:backgroundTint="@color/black"
+      android:onClick="onBuyNowClicked"
+      android:text="BUY NOW"
+      android:textColor="#E18B0D"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.921"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageButton
+      android:id="@+id/imageButton"
+      android:layout_width="126dp"
+      android:layout_height="52dp"
+      android:layout_marginBottom="20dp"
+      android:backgroundTint="@color/black"
+      android:contentDescription="@string/background_image"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="@+id/button"
+      app:layout_constraintHorizontal_bias="0.096"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintVertical_bias="0.967"
+      app:srcCompat="@drawable/btn_2"
+      app:tint="#E18B0D"
+      tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kahitcoffee.HomePage">
+    tools:context=".homepage">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Welcome To our Menu!"
+                    android:text="Kahits coffee shop"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -48,15 +48,36 @@
                 tools:context=".HomePage">
 
                 <androidx.appcompat.widget.SearchView
-                    android:id="@+id/search_view"
+                    android:id="@+id/searchView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@android:color/holo_green_light"
-                    android:iconifiedByDefault="false"
-                    android:padding="8dp"
-                    android:queryHint="@string/search_for_products" />
+                    android:queryHint="Search items" />
 
             </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:text="Popular/Trending " />
+            </LinearLayout>
+
+
+
 
 
             <HorizontalScrollView
@@ -65,43 +86,330 @@
                 android:fillViewport="true"
                 android:scrollbars="none">
 
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:backgroundTint="@color/darkblue"
-                    android:background="@color/Green">
+                    android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/promotional_image2"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_marginEnd="16dp"
-                        android:contentDescription="@string/promotion"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/iced" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/sololevelingCardview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:backgroundTint="#5E5A5A"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        tools:ignore="DuplicateSpeakableTextCheck">
 
-                    <ImageView
-                        android:id="@+id/second_promotional_image3"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_toEndOf="@id/promotional_image2"
-                        android:layout_marginStart="16dp"
-                        android:contentDescription="promotions"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/cap" />
-                    <ImageView
-                        android:id="@+id/second_promotional_image1"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:layout_toEndOf="@id/second_promotional_image3"
-                        android:layout_marginStart="16dp"
-                        android:contentDescription="promotions"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/latte" />
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="346dp"
+                            android:layout_height="183dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="solo leveling description">
 
-                </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/soloLeveling2"
+                                android:layout_width="164dp"
+                                android:layout_height="164dp"
+                                android:background="#FDFDFD"
+                                android:backgroundTint="#5E5A5A"
+                                android:contentDescription="@string/asdsa01123"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.473"
+                                app:srcCompat="@drawable/matcha"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <ImageView
+                                android:id="@+id/sololevelingWishlist"
+                                android:layout_width="32dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="@string/wishlist"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.095"
+                                app:srcCompat="@drawable/btn_3"
+                                app:tint="@color/white"
+                                tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/soloLevelingPrice"
+                                android:layout_width="71dp"
+                                android:layout_height="39dp"
+                                android:contentDescription="@string/pricetxt"
+                                android:text="$49"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.614"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.081"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+                            <TextView
+                                android:id="@+id/sololeveling"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="Matcha"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.8"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.322"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                            <TextView
+                                android:id="@+id/sololevelingDescription"
+                                android:layout_width="175dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/titletxt"
+                                android:ellipsize="end"
+                                android:maxLines="5"
+                                android:text="Is a finely grounded powder from tea leaves, and when combined with milk and sweetener, it gives a distinctive green colour."
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.953"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.904"
+                                tools:ignore="TextSizeCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fairytailCardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:backgroundTint="#5E5A5A"
+                        android:focusable="true"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        tools:ignore="DuplicateSpeakableTextCheck">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="347dp"
+                            android:layout_height="180dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="solo leveling description">
+
+                            <ImageView
+                                android:id="@+id/fairytail2"
+                                android:layout_width="164dp"
+                                android:layout_height="164dp"
+                                android:background="#FDFDFD"
+                                android:backgroundTint="#5E5A5A"
+                                android:contentDescription="@string/asdsa01123"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/iced"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <ImageView
+                                android:id="@+id/fairytailWishlist"
+                                android:layout_width="32dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="@string/wishlist"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.095"
+                                app:srcCompat="@drawable/btn_3"
+                                app:tint="@color/white"
+                                tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/fairytailPrice"
+                                android:layout_width="71dp"
+                                android:layout_height="39dp"
+                                android:contentDescription="@string/pricetxt"
+                                android:text="$69"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.614"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.081"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                            <TextView
+                                android:id="@+id/fairytailt"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+
+                                android:text="Iced Americano"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.8"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.322"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                            <TextView
+                                android:id="@+id/fairytailDescription"
+                                android:layout_width="175dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/titletxt"
+                                android:ellipsize="end"
+                                android:maxLines="5"
+                                android:text="Espresso shots topped with cold water produce a light layer of crema, then served over ice"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.953"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.904"
+                                tools:ignore="TextSizeCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/jujutsukaisenCardview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:backgroundTint="#5E5A5A"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        tools:ignore="DuplicateSpeakableTextCheck">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="347dp"
+                            android:layout_height="180dp"
+                            android:layout_margin="8dp"
+                            android:contentDescription="jujutsu kaisen description">
+
+                            <ImageView
+                                android:id="@+id/jjk"
+                                android:layout_width="164dp"
+                                android:layout_height="164dp"
+                                android:backgroundTint="#5E5A5A"
+                                android:background="#FDFDFD"
+                                android:contentDescription="@string/asdsa01123"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:srcCompat="@drawable/taro"
+                                tools:ignore="ImageContrastCheck" />
+
+                            <ImageView
+                                android:id="@+id/jjkWishlist"
+                                android:layout_width="32dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="@string/wishlist"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.095"
+                                app:srcCompat="@drawable/btn_3"
+                                app:tint="@color/white"
+                                tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                            <TextView
+                                android:id="@+id/jjkPrice"
+                                android:layout_width="71dp"
+                                android:layout_height="39dp"
+                                android:contentDescription="@string/pricetxt"
+                                android:text="$69"
+                                android:textColor="@color/black"
+                                android:textSize="22sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.614"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.081"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                            <TextView
+                                android:id="@+id/jjkt"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+
+                                android:text="Taro"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.8"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.322"
+                                tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                            <TextView
+                                android:id="@+id/jjkDescription"
+                                android:layout_width="175dp"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/titletxt"
+                                android:ellipsize="end"
+                                android:maxLines="5"
+                                android:text="a type of milk tea that is made with taro, a starchy root vegetable that has a sweet, nutty flavour"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:textStyle="italic"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.953"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.843"
+                                tools:ignore="TextSizeCheck" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
             </HorizontalScrollView>
+
 
 
             <LinearLayout
@@ -120,7 +428,7 @@
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:text="Genre/Category" />
+                    android:text="Category" />
             </LinearLayout>
 
             <HorizontalScrollView
@@ -135,32 +443,14 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/category_all"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:text="@string/all"
-                        android:textColor="#3abc12"
-                        android:padding="8dp" />
 
-                    <Button
-                        android:id="@+id/horror"
-                        style="?android:attr/buttonBarButtonStyle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:backgroundTint="@color/black"
-                        android:textColor="#3abc12"
-                        android:text="Cold"
-                        android:padding="8dp" />
 
                     <Button
                         android:id="@+id/fantasy"
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#3abc12"
+                        android:textColor="#FF9800"
                         android:backgroundTint="@color/black"
                         android:text="Hot"
                         android:padding="8dp" />
@@ -171,18 +461,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/black"
-                        android:textColor="#3abc12"
+                        android:textColor="#FF9800"
+                        android:text="Cold"
+                        android:padding="8dp" />
+
+
+
+                    <Button
+                        android:id="@+id/darkFantasy"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:textColor="#FF9800"
                         android:text="Milktea"
                         android:padding="8dp" />
 
                     <Button
-                        android:id="@+id/adult"
+                        android:id="@+id/Adventure"
                         style="?android:attr/buttonBarButtonStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="#3abc12"
+                        android:textColor="#FF9800"
                         android:backgroundTint="@color/black"
-                        android:text="Snacks"
+                        android:text="Toast"
                         android:padding="8dp" />
 
 
@@ -220,7 +522,7 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/cuppucinoCardView"
+                    android:id="@+id/onepieceCardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
@@ -228,17 +530,16 @@
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp"
-                    android:backgroundTint="@color/Green"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="347dp"
                         android:layout_height="180dp"
                         android:layout_margin="8dp"
-                        android:contentDescription="capp">
+                        android:contentDescription="onepiecee">
 
                         <ImageView
-                            android:id="@+id/capcover"
+                            android:id="@+id/onepiececover"
                             android:layout_width="164dp"
                             android:layout_height="164dp"
                             android:background="#FDFDFD"
@@ -246,11 +547,11 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/cap"
+                            app:srcCompat="@drawable/latte"
                             tools:ignore="ImageContrastCheck" />
 
                         <ImageView
-                            android:id="@+id/capWishlist"
+                            android:id="@+id/onepieceWishlist"
                             android:layout_width="32dp"
                             android:layout_height="29dp"
                             android:contentDescription="@string/wishlist"
@@ -265,7 +566,7 @@
                             tools:ignore="MissingConstraints,ImageContrastCheck" />
 
                         <TextView
-                            android:id="@+id/capPrice"
+                            android:id="@+id/onepiecePrice"
                             android:layout_width="71dp"
                             android:layout_height="39dp"
                             android:contentDescription="@string/pricetxt"
@@ -283,12 +584,12 @@
 
 
                         <TextView
-                            android:id="@+id/cap"
+                            android:id="@+id/onepiece"
                             android:layout_width="142dp"
                             android:layout_height="wrap_content"
                             android:singleLine="true"
 
-                            android:text="Cappuccino"
+                            android:text="Latte"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -301,13 +602,13 @@
                             tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
 
                         <TextView
-                            android:id="@+id/capDescription"
+                            android:id="@+id/onepieceDescription"
                             android:layout_width="175dp"
                             android:layout_height="wrap_content"
                             android:contentDescription="@string/titletxt"
                             android:ellipsize="end"
                             android:maxLines="5"
-                            android:text="A freshly pulled shot of espresso layered with steamed whole milk and thick rich foam to offer a luxurious velvety texture and complex aroma."
+                            android:text="A latte begins with the same base — a single or double shot of espresso. "
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="italic"
@@ -324,13 +625,12 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/latteCardview"
+                    android:id="@+id/bleachCardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:backgroundTint="@color/darkblue"
                     app:cardCornerRadius="8dp"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
@@ -350,7 +650,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/latte"
+                            app:srcCompat="@drawable/winta"
                             tools:ignore="ImageContrastCheck" />
 
                         <ImageView
@@ -392,7 +692,7 @@
                             android:layout_height="wrap_content"
                             android:singleLine="true"
 
-                            android:text="Latte"
+                            android:text="Winter Melon"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -405,13 +705,13 @@
                             tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
 
                         <TextView
-                            android:id="@+id/latteDescription"
+                            android:id="@+id/bleachDescription"
                             android:layout_width="175dp"
                             android:layout_height="wrap_content"
                             android:contentDescription="@string/titletxt"
                             android:ellipsize="end"
                             android:maxLines="5"
-                            android:text="A milk coffee that is a made up of one or two shots of espresso, steamed milk and a final, thin layer of frothed milk on top."
+                            android:text="The taste is similar to that of cucumber – refreshing and vegetal, with a slight grass-like flavour."
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="italic"
@@ -428,14 +728,13 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/MistoCardview"
+                    android:id="@+id/berserkCardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
-                    android:backgroundTint="@color/Green"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
@@ -455,7 +754,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/misto"
+                            app:srcCompat="@drawable/cap"
                             tools:ignore="ImageContrastCheck" />
 
                         <ImageView
@@ -496,7 +795,7 @@
                             android:layout_height="wrap_content"
                             android:singleLine="true"
 
-                            android:text="Caffe Misto"
+                            android:text="Cappuccino"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -515,7 +814,7 @@
                             android:contentDescription="@string/titletxt"
                             android:ellipsize="end"
                             android:maxLines="5"
-                            android:text="A one-to-one combination of fresh-brewed coffee and steamed milk "
+                            android:text="A cappuccino is the perfect balance of espresso, steamed milk and foam."
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="italic"
@@ -534,14 +833,13 @@
 
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/americanoCardview"
+                    android:id="@+id/narutoCardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardCornerRadius="8dp"
-                    android:backgroundTint="@color/darkblue"
                     app:cardElevation="4dp"
                     tools:ignore="DuplicateSpeakableTextCheck">
 
@@ -549,10 +847,10 @@
                         android:layout_width="347dp"
                         android:layout_height="180dp"
                         android:layout_margin="8dp"
-                        android:contentDescription="americano">
+                        android:contentDescription="naruto">
 
                         <ImageView
-                            android:id="@+id/americanoCover"
+                            android:id="@+id/NarutoCover"
                             android:layout_width="164dp"
                             android:layout_height="164dp"
                             android:background="#FDFDFD"
@@ -560,11 +858,11 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/iced"
+                            app:srcCompat="@drawable/misto"
                             tools:ignore="ImageContrastCheck" />
 
                         <ImageView
-                            android:id="@+id/americanoWishlist"
+                            android:id="@+id/narutoWishlist"
                             android:layout_width="32dp"
                             android:layout_height="29dp"
                             android:contentDescription="@string/wishlist"
@@ -579,7 +877,7 @@
                             tools:ignore="MissingConstraints,ImageContrastCheck" />
 
                         <TextView
-                            android:id="@+id/americanoprice"
+                            android:id="@+id/Narutoprice"
                             android:layout_width="71dp"
                             android:layout_height="39dp"
                             android:contentDescription="@string/pricetxt"
@@ -597,12 +895,12 @@
 
 
                         <TextView
-                            android:id="@+id/americano"
+                            android:id="@+id/naruto"
                             android:layout_width="142dp"
                             android:layout_height="wrap_content"
                             android:singleLine="true"
 
-                            android:text="Iced Americano"
+                            android:text="Misto"
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="bold"
@@ -615,22 +913,22 @@
                             tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
 
                         <TextView
-                            android:id="@+id/americanoDescription"
+                            android:id="@+id/narutoDescription"
                             android:layout_width="175dp"
                             android:layout_height="wrap_content"
                             android:contentDescription="@string/titletxt"
                             android:ellipsize="end"
                             android:maxLines="5"
-                            android:text=" an Americano served over ice: espresso, cold water (optional), and ice"
+                            android:text="a coffee drink that is made with equal parts of brewed coffee and steamed milk."
                             android:textColor="@color/black"
                             android:textSize="16sp"
                             android:textStyle="italic"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintHorizontal_bias="0.953"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.71"
+                            app:layout_constraintVertical_bias="0.904"
                             tools:ignore="TextSizeCheck" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -642,9 +940,124 @@
 
 
 
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/hunterxhunterCardview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp"
+                    tools:ignore="DuplicateSpeakableTextCheck">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="347dp"
+                        android:layout_height="180dp"
+                        android:layout_margin="8dp"
+                        android:contentDescription="solo leveling description">
+
+                        <ImageView
+                            android:id="@+id/hxh2"
+                            android:layout_width="164dp"
+                            android:layout_height="164dp"
+                            android:background="#FDFDFD"
+                            android:contentDescription="@string/asdsa01123"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/matcha"
+                            tools:ignore="ImageContrastCheck" />
+
+                        <ImageView
+                            android:id="@+id/hxhWishlist"
+                            android:layout_width="32dp"
+                            android:layout_height="29dp"
+                            android:contentDescription="@string/wishlist"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.095"
+                            app:srcCompat="@drawable/btn_3"
+                            app:tint="@color/black"
+                            tools:ignore="MissingConstraints,ImageContrastCheck" />
+
+                        <TextView
+                            android:id="@+id/hxhPrice"
+                            android:layout_width="71dp"
+                            android:layout_height="39dp"
+                            android:contentDescription="@string/pricetxt"
+                            android:text="$69"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.614"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.081"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck,VisualLintOverlap" />
+
+
+                        <TextView
+                            android:id="@+id/hunterxhunter"
+                            android:layout_width="142dp"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+
+                            android:text="Matcha"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.8"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.322"
+                            tools:ignore="DuplicateIds,MissingConstraints,TextSizeCheck" />
+
+                        <TextView
+                            android:id="@+id/hxhDescription"
+                            android:layout_width="175dp"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/titletxt"
+                            android:ellipsize="end"
+                            android:maxLines="5"
+                            android:text="s a finely grounded powder from tea leaves, and when combined with milk and sweetener, it gives a distinctive green colour"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="italic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.953"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.904"
+                            tools:ignore="TextSizeCheck" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
             </LinearLayout>
 
         </LinearLayout>
+
+
+
 
 
 

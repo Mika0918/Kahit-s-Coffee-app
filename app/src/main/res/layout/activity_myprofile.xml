@@ -5,28 +5,72 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kahitcoffee.Myprofile">
+    tools:context=".Myprofile">
+
 
     <LinearLayout
-        android:layout_width="260dp"
-        android:layout_height="match_parent"
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176">
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile2" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/profileTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome To Your profile"
-            android:textColor="#807D7D" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:text="My Profile"
-            android:textSize="18sp"
+            android:textAlignment="center"
+            android:textSize="30sp"
             android:textStyle="bold" />
+
+        <!-- TextView for Name -->
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Name:Johnny Sins"
+            android:textSize="25sp" />
+
+        <!-- TextView for Email -->
+        <TextView
+            android:id="@+id/textViewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Email: john@example.com"
+            android:textSize="25sp" />
+
+        <!-- TextView for Contact Number -->
+        <TextView
+            android:id="@+id/textViewContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Contact Number: +1234567890"
+            android:textSize="25sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
